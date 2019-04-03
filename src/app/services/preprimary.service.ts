@@ -13,7 +13,7 @@ export class PrePrimaryService {
   private schoolsUrl: string;
 
   constructor(private http: HttpClient, private settings: SettingsService) {
-    this.schoolsUrl = `${this.settings.getApiUrl()}schools/preprimaryschools/`;
+    this.schoolsUrl = `${this.settings.getApiUrl()}preprimary/preprimaryschools/`;
   }
 
   getPrePrimarySchoolById(id: Number): Observable<PrePrimaryModel> {

@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { SchoolDetailComponent } from './school-detail/school-detail.component';
 import { PrePrimaryComponent } from './pre-primary/pre-primary.component';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './_guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -33,7 +34,8 @@ const routes: Routes = [
         children: [
           {
             path: ':id',
-            component: PrePrimaryComponent
+            component: PrePrimaryComponent,
+            canActivate: [AuthGuard]
           }
         ]
       }
