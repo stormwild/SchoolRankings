@@ -6,6 +6,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AngularMaterialModule } from './angular-material/angular-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GoogleChartsModule } from 'angular-google-charts';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component';
@@ -54,7 +58,10 @@ import { LoginDirective } from './login.directive';
     AngularMaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    GoogleChartsModule.forRoot()
+    GoogleChartsModule.forRoot(),
+    AngularFireModule.initializeApp(environment.config),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
