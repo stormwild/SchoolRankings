@@ -1,16 +1,16 @@
 import { Component, OnInit, Injectable } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { SchoolService } from '../services/school.service';
-import { School} from '../model/school';
+import { SchoolService } from '../../_shared_services/school.service';
+import { School} from '../../model/school';
 
 @Component({
   selector: 'app-school-detail',
-  templateUrl: './school-detail.component.html',
-  styleUrls: ['./school-detail.component.css']
+  templateUrl: './school-overview.component.html',
+  styleUrls: ['./school-overview.component.css']
 })
 
 
-export class SchoolDetailComponent implements OnInit {
+export class SchoolOverviewComponent implements OnInit {
   school: School[];
   id: Number;
 

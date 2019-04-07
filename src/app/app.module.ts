@@ -17,17 +17,17 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SchoolDetailComponent } from './school-detail/school-detail.component';
+import { SchoolOverviewComponent } from './school-details/school-overview/school-overview.component';
 import { GrdFilterPipe } from './pipes/grd-filter.pipe';
-import { StickyThingDirective} from './directives/sticky-thing.directive';
-import { GoogleChartComponent } from './google-chart/google-chart.component';
+import { StickyThingDirective} from './directives/sticky-things/sticky-thing.directive';
+import { GoogleChartComponent } from './school-details/google-chart/google-chart.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
-import { PrePrimaryComponent } from './pre-primary/pre-primary.component';
-import { SchoolBannerTitleComponent } from './school-banner-title/school-banner-title.component';
-import { QuickStatsComponent } from './quick-stats/quick-stats.component';
-import { SchoolTabsNavComponent } from './school-tabs-nav/school-tabs-nav.component';
+import { PrePrimaryComponent } from './school-details/pre-primary/pre-primary.component';
+import { SchoolBannerTitleComponent } from './school-details/school-banner-title/school-banner-title.component';
+import { QuickStatsComponent } from './school-details/quick-stats/quick-stats.component';
+import { SchoolTabsNavComponent } from './school-details/school-tabs-nav/school-tabs-nav.component';
 import { LoginComponent } from './login/login.component';
-import { LoginDirective } from './login.directive';
+import { LoginDirective } from './directives/login/login.directive';
 
 
 @NgModule({
@@ -38,7 +38,7 @@ import { LoginDirective } from './login.directive';
     AboutComponent,
     PageNotFoundComponent,
     DashboardComponent,
-    SchoolDetailComponent,
+    SchoolOverviewComponent,
     GrdFilterPipe,
     StickyThingDirective,
     GoogleChartComponent,

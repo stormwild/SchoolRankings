@@ -1,8 +1,8 @@
 import { Component, OnInit, AfterViewInit, AfterContentInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PrePrimaryService } from '../services/preprimary.service';
-import { PrePrimaryModel, PrePrimary } from '../model/pre-primary';
-import { School } from '../model/school';
+import { PrePrimaryService } from '../_services/preprimary.service';
+import { PrePrimaryModel, PrePrimary } from '../../model/pre-primary';
+import { School } from '../../model/school';
 
 @Component({
   selector: 'app-pre-primary',
@@ -72,8 +72,7 @@ export class PrePrimaryComponent implements OnInit, AfterContentInit {
 
     this.id = this._activatedRoute.snapshot.params.id;
     this.getSchool(this.id);
-    this.remSeats = this.prePrimaryLocal.pre_primary_school_seats_count - this.prePrimaryLocal.pre_primary_school_students_applied_count;
-    console.log('REM SEATS: ', this.remSeats);
+   
   }
 
   ngAfterContentInit(){
@@ -85,6 +84,9 @@ export class PrePrimaryComponent implements OnInit, AfterContentInit {
     ['Applied ('+ this.prePrimaryLocal.pre_primary_school_students_applied_count + ')', this.prePrimaryLocal.pre_primary_school_students_applied_count],
     ['Accepted ('+ this.prePrimaryLocal.pre_primary_school_students_accepted_count + ')', this.prePrimaryLocal.pre_primary_school_students_accepted_count]];
     
+
+    this.remSeats = this.prePrimaryLocal.pre_primary_school_seats_count - this.prePrimaryLocal.pre_primary_school_students_accepted_count;
+    console.log('REM SEATS: ', this.remSeats);
   }
    getSchool(id: Number) {
 

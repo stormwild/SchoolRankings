@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { School } from '../model/school';
+import { School } from '../../model/school';
 
 @Component({
   selector: 'app-quick-stats',

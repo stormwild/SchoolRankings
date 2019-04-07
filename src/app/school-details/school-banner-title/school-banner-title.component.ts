@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { School } from '../model/school';
+import { School } from '../../model/school';
 
 @Component({
   selector: 'app-school-banner-title',

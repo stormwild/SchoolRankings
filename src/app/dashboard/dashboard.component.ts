@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 
-import { PagerService } from '../services/pager.service';
-import { SchoolService } from '../services/school.service';
+import { PagerService } from '../dashboard/pager.service';
+import { SchoolService } from '../_shared_services/school.service';
 import { School } from '../model/school';
 
 @Component({

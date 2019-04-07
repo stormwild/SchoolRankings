@@ -4,10 +4,10 @@ import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { SchoolDetailComponent } from './school-detail/school-detail.component';
-import { PrePrimaryComponent } from './pre-primary/pre-primary.component';
+import { SchoolOverviewComponent } from './school-details/school-overview/school-overview.component';
+import { PrePrimaryComponent } from './school-details/pre-primary/pre-primary.component';
 import { LoginComponent } from './login/login.component';
-import { AuthGuard } from './_guards/auth.guard';
+import { AuthGuard } from './auth/_guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -27,7 +27,7 @@ const routes: Routes = [
     children: [
       {
         path: ':id',
-        component: SchoolDetailComponent
+        component: SchoolOverviewComponent
       },
       {
         path: 'pre-primary',

@@ -1,8 +1,8 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { SettingsService } from './settings.service';
+import { SettingsService } from '../../_shared_services/settings.service';
 import { Observable } from 'rxjs';
-import { PrePrimary, PrePrimaryModel } from '../model/pre-primary';
+import { PrePrimary, PrePrimaryModel } from '../../model/pre-primary';
 
 @Injectable({
   providedIn: 'root'
