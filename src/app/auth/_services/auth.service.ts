@@ -58,7 +58,7 @@ export class AuthService {
       email,
       displayName
     };
-
+    
     this.router.navigate(['/']);
     return userRef.set(data, { merge: true });
 

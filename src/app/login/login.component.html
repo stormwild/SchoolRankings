@@ -11,7 +11,7 @@
 
 <div class="form-container sign-up-container">
   <form action="#">
-        <a href="#"><img src="/assets/image/nav-logo.png"/></a>
+        <a [routerLink]="['/']"><img src="/assets/image/nav-logo.png"/></a>
       <h1>Create Account</h1>
       <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
@@ -27,11 +27,11 @@
 </div>
 <div class="form-container sign-in-container">
   <form (ngSubmit)="login()">
-      <a href="#"><img src="/assets/image/nav-logo.png"/></a>
+      <a [routerLink]="['/']"><img src="/assets/image/nav-logo.png"/></a>
       <h1>Sign in</h1>
       <div class="social-container">
           <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-          <a (click)= "auth.googleSignIn()" class="social" ><i class="fab fa-google-plus-g"></i></a>
+          <a [routerLink]="['/login']" (click)= "auth.googleSignIn()" class="social" ><i class="fab fa-google-plus-g"></i></a>
           <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <span>or use your account</span>
@@ -50,13 +50,13 @@
           </p>
          
           <button class="ghost" id="signIn">Sign In</button>
-          <a href="#"><button class="ghost">Home</button></a>
+          <a [routerLink]="['/']"><button class="ghost">Home</button></a>
       </div>
       <div class="overlay-panel overlay-right" >
           <h1 style="color: #ffffff">Shout Out to Parents!</h1>
           <p> Join Us & Feel the Difference... </p>
           <button class="ghost" id="signUp">Sign Up</button>
-          <a href="#"><button class="ghost">Home</button></a>
+          <a [routerLink]="['/']"><button class="ghost">Home</button></a>
       </div>
   </div>
 </div>

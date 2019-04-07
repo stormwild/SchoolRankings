@@ -27,15 +27,16 @@ export class NavigationMenuComponent implements OnInit {
     }
 
     ngOnInit() {
-      console.log('Auth User: ', this.auth.user$.subscribe((res)=> {
+      this.auth.user$.subscribe((res)=> {
         if(res){
+          localStorage.setItem('user',JSON.stringify(res));
           this.isAuth = true;
         }
-      }));
+      });
     }
 
     signOut(){
-      console.log('Auth User: ', this.auth.user$);
       this.auth.googleSignOut();
+      localStorage.setItem('user',null);
     }
 }

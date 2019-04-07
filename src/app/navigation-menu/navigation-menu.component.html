@@ -1,6 +1,6 @@
 <header class="app-header navbar">
   
-    <a class="navbar-brand" href="#" >
+    <a class="navbar-brand" [routerLink]="['/']" >
       <img class="navbar-brand-full" src="/assets/image/school-header-logo.svg" height="55px">
      </a>
  
@@ -20,7 +20,7 @@
             <i class="fa fa-user"></i> Profile</a>
           <a *ngIf="isAuth" class="dropdown-item" href="#">
             <i class="fa fa-wrench"></i> Settings</a> 
-          <a *ngIf="isAuth" class="dropdown-item" (click)= "signOut()">
+          <a *ngIf="isAuth" class="dropdown-item" [routerLink]="['/login']" (click)= "signOut()">
             <i class="fa fa-sign-out"></i> Logout</a>
              
         </div>
